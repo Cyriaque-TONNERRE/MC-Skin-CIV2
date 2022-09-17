@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 1vw;
+    overflow-x: hidden;
+}
+
+body h1 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 5vw;
+    margin: 3vw;
+    font-weight: bold;
+}
+
+body h3 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 3vw;
+    margin: 3vw;
+}
+
+.pseudo {
+    text-align: center;
+    margin-bottom: 3vw;
+}
+
+body input {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3vw;
+    text-align: center;
+    width: 30vw;
+    border: 1px solid #000;
+    border-radius: 1vw;
+    padding: 1vw;
+}
+
+.skin {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.skin div {
+    width: 29%;
+    margin: 1vw;
+    padding: 1vw;
+    text-align: center;
+    border-radius: 1vw;
+    box-shadow: -1vw 1vw 1vw #939090;
+}
+
+.pays {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 2vw;
+}
+
+.pays div {
+    width: 29%;
+    margin: 1vw;
+    padding: 1vw;
+    text-align: center;
+    border-radius: 1vw;
+    background-color: #fcfcfc;
+    box-shadow: -1vw 1vw 1vw #939090;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3vw;
+}

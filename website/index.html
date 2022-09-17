@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skin Custom CIV2</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Skin Custom CIV2</h1>
+    <h3>Il suffit de mettre votre pseudo mincraft et de cliquer sur le skin souhaitée,</h3>
+    <h3>Le site s'occupe tout seul d'ajouter la tête de votre skin. </h3>
+    <h3>En cas de problème la touche F5 est votre amie </h3>
+    <!-- recuperer le pseudo (text box) -->
+    <div class="pseudo">
+        <input type="text" id="pseudo" placeholder="Pseudo">
+    </div>
+    <div class="pays">
+        <div id="france">
+                Français
+        </div>
+        <div id="Espagne">
+                Espagnol
+        </div>
+        <div id="Angleterre">
+                Anglais
+        </div>
+    </div>
+    <div class="skin">
+
+        <div id="foot" style="display: none">
+            <a>
+                <img src="./img/foot.png" alt="Skin Foot"/>
+            </a>
+        </div>
+        <div id="police" style="display: none">
+            <a>
+                <img src="./img/police.png" alt="Skin Police"/>
+            </a>
+        </div>
+        <div id="soldat" style="display: none">
+            <a>
+                <img src="./img/soldat.png" alt="Skin Soldat"/>
+            </a>
+        </div>
+        <div id="baguette" style="display: none">
+            <a>
+                <img src="./img/baguette.png" alt="Skin Baguette"/>
+            </a>
+        </div>
+        <div id="british" style="display: none">
+            <a>
+                <img src="./img/british.png" alt="Skin British"/>
+            </a>
+        </div>
+        <script>
+            // recuperer le pseudo
+            let pseudo = document.getElementById("pseudo");
+            const france = document.getElementById("france");
+            const Espagne = document.getElementById("Espagne");
+            const Angleterre = document.getElementById("Angleterre");
+
+            const foot = document.getElementById("foot");
+            const police = document.getElementById("police");
+            const soldat = document.getElementById("soldat");
+            const baguette = document.getElementById("baguette");
+            const british = document.getElementById("british");
+
+            //afficher en fonction du pays
+
+            france.addEventListener("click", function(){
+                foot.style.display = "none";
+                police.style.display = "none";
+                soldat.style.display = "none";
+                baguette.style.display = "block";
+                british.style.display = "none";
+            });
+
+            Espagne.addEventListener("click", function(){
+                foot.style.display = "block";
+                police.style.display = "block";
+                soldat.style.display = "block";
+                baguette.style.display = "none";
+                british.style.display = "none";
+            });
+
+            Angleterre.addEventListener("click", function(){
+                foot.style.display = "none";
+                police.style.display = "none";
+                soldat.style.display = "none";
+                baguette.style.display = "none";
+                british.style.display = "block";
+            });
+
+            // recuperer choix skin
+            foot.addEventListener('click', () => {
+                if (pseudo.value !== "") {
+                    location.replace(`./foot/${pseudo.value}.png`);
+                }
+            })
+            police.addEventListener('click', () => {
+                if (pseudo.value !== "") {
+                    location.replace(`./police/${pseudo.value}.png`);
+                }
+            })
+            soldat.addEventListener('click', () => {
+                if (pseudo.value !== "") {
+                    location.replace(`./soldat/${pseudo.value}.png`);
+                }
+            })
+            baguette.addEventListener('click', () => {
+                if (pseudo.value !== "") {
+                    location.replace(`./baguette/${pseudo.value}.png`);
+                }
+            })
+            british.addEventListener('click', () => {
+                if (pseudo.value !== "") {
+                    location.replace(`./british/${pseudo.value}.png`);
+                }
+            })
+        </script>
+    </div>
+</body>
+</html>
